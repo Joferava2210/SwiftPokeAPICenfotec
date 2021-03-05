@@ -11,6 +11,7 @@
 		8AF90BA325F1CDFD0071DD86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF90BA225F1CDFD0071DD86 /* ContentView.swift */; };
 		8AF90BA525F1CE010071DD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF90BA425F1CE010071DD86 /* Assets.xcassets */; };
 		8AF90BA825F1CE010071DD86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF90BA725F1CE010071DD86 /* Preview Assets.xcassets */; };
+		8AF90BB125F1CEC00071DD86 /* PokemonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF90BB025F1CEC00071DD86 /* PokemonResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		8AF90BA425F1CE010071DD86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AF90BA725F1CE010071DD86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AF90BA925F1CE010071DD86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AF90BB025F1CEC00071DD86 /* PokemonResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				8AF90BA025F1CDFD0071DD86 /* SwiftPokeAPIApp.swift */,
 				8AF90BA225F1CDFD0071DD86 /* ContentView.swift */,
+				8AF90BB025F1CEC00071DD86 /* PokemonResult.swift */,
 				8AF90BA425F1CE010071DD86 /* Assets.xcassets */,
 				8AF90BA925F1CE010071DD86 /* Info.plist */,
 				8AF90BA625F1CE010071DD86 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AF90BA325F1CDFD0071DD86 /* ContentView.swift in Sources */,
+				8AF90BB125F1CEC00071DD86 /* PokemonResult.swift in Sources */,
 				8AF90BA125F1CDFD0071DD86 /* SwiftPokeAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
