@@ -72,6 +72,10 @@ struct PokemonDetail: View {
                 Text("URL: "+pokeDetail.url).bold()
                 Text("Weight "+String(weight)).bold()
                 Text("Height "+String(height)).bold()
+                if let pokeUrl = URL(string:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+String(id)+".png"){
+                    Image(systemName: "square.fill").data(url: pokeUrl)
+                        .frame(width: 200.0, height: 100.0)
+                }
             }.onAppear(perform:{
                 self.loadDetails(urlInfo: pokeDetail.url)
             })
@@ -103,6 +107,19 @@ struct PokemonDetail: View {
         }.resume()
     }
     
+}
+
+extension Image {
+    func data(url: URL) -> Self {
+        if let data = try? Data(contentsOf: url){
+            guard let image = UIImage(data: data) else {
+                return Image(systemName: "square.fill")
+            }
+            return Image(uiImage: image)
+                .resizable()
+        }
+        return self.resizable()
+    }
 }
     
 
