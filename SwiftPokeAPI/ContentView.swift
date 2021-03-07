@@ -12,20 +12,26 @@ struct ContentView: View {
     @State var results = [Pokemon]()
     
     var body: some View {
-        List(results, id: \.name){ item in
-            VStack(alignment: .leading){
-                Text("Pokemon")
-                Button(action: {
-                    print("The Pokemon selected is: " + item.name);
-                }) {
-                    Text(item.name.uppercased());
+        NavigationView{
+            List(results, id: \.name){ item in
+                VStack(alignment: .leading){
+                    Text("Pokemon")
+//                    Button(action: {
+//                        print("The Pokemon selected is: " + item.name);
+//                    }) {
+                        Text(item.name.uppercased())
+//                    }
+                    .foregroundColor(.blue)
+                    .font(.title2)
+                    Spacer()
+                }.lineSpacing(10.0)
+                NavigationLink(destination: PokemonDetail(pokeDetail: item)){
+                    
                 }
-                .foregroundColor(.blue)
-                .font(.title2)
-                Spacer()
-            }.lineSpacing(10.0)
-            
-        }.onAppear(perform: loadData)
+            }.onAppear(perform: loadData)
+            .navigationBarTitle("Lista de Pokemones")
+            .padding()
+        }
     }
     
     func loadData(){
@@ -48,6 +54,21 @@ struct ContentView: View {
                 }
             }
         }.resume()
+    }
+}
+
+struct PokemonDetail: View {
+    var pokeDetail: Pokemon
+    
+    var body: some View {
+        VStack {
+            Text("Pokemon").font(.title)
+            VStack {
+                Text("Name: "+pokeDetail.name)
+                Text("URL: "+pokeDetail.url)
+            }
+            Spacer()
+        }
     }
 }
     
