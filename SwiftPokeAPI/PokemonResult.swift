@@ -17,4 +17,10 @@ struct Pokemon: Codable {
     let url: String;
 }
 
+struct PokemonInfo: Codable{
+    let id: Int
+    let height: Int
+    let weight: Int
+}
+
 
